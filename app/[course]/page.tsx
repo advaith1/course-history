@@ -1,4 +1,4 @@
-import { Suspense } from "react"
+import { Fragment, Suspense } from "react"
 import Quarter from "./quarter"
 import { termData } from "@/term-data"
 import { notFound } from "next/navigation"
@@ -7,8 +7,8 @@ export default function Page({ params }: { params: { course: string } }) {
 	const [subject, number] = params.course.split("-")
 	if (!subject || !number) return notFound()
 	return <>
-		{termData.map((quarters, i) =>
-			<div className="columns is-centered" key={i}>
+		{termData.map((quarters, i) => <Fragment key={i}>
+			<div className="columns is-centered">
 				{Array.from({ ...quarters, length: 4 }).map((quarter, i) => (
 					<div className="column" key={i}>
 						{quarter ?
@@ -19,7 +19,8 @@ export default function Page({ params }: { params: { course: string } }) {
 					</div>
 				))}
 			</div>
-		)}
+			<hr className="is-hidden-tablet my-4" />
+		</Fragment>)}
 	</>
 }
 
