@@ -31,11 +31,5 @@ export const termData: Quarter[][] = [
 		{ id: 2210, name: 'Winter 2021' },
 		{ id: 2212, name: 'Spring 2021' },
 		{ id: 2214, name: 'Summer 2021' }
-	],
-	[
-		{ id: 2198, name: 'Fall 2019' },
-		{ id: 2200, name: 'Winter 2020' },
-		{ id: 2202, name: 'Spring 2020' },
-		{ id: 2204, name: 'Summer 2020' }
 	]
 ]
