@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Quarter } from '@/term-data'
+import type { Quarter } from '@/term-data'
 import { faClock, faLocationDot, faPeopleGroup, faPersonChalkboard } from '@fortawesome/free-solid-svg-icons'
 
 interface Instructor {
