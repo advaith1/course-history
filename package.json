@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -13,9 +13,9 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "bulma": "^0.9.4",
-    "next": "14.2.13",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "next": "14.1.0",
+    "react": "^18",
+    "react-dom": "^18",
     "sass": "^1.77.6"
   },
   "devDependencies": {
