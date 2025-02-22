@@ -3,10 +3,10 @@ import Quarter from "./quarter"
 import { termData } from "@/term-data"
 import { notFound } from "next/navigation"
 
-export default function Page({ params }: { params: { course: string } }) {
-	const [subject, number] = params.course.split("-")
-	if (!subject || !number) return notFound()
-	return <>
+export default async function Page({ params }: { params: Promise<{ course: string }> }) {
+    const [subject, number] = (await params).course.split("-")
+    if (!subject || !number) return notFound()
+    return <>
 		{termData.map((quarters, i) => <Fragment key={i}>
 			<div className="columns is-centered">
 				{Array.from({ ...quarters, length: 4 }).map((quarter, i) => (
@@ -24,9 +24,9 @@ export default function Page({ params }: { params: { course: string } }) {
 	</>
 }
 
-export function generateMetadata({ params }: { params: { course: string } }) {
-	const course = params.course.replace("-", " ")
-	return {
+export async function generateMetadata({ params }: { params: Promise<{ course: string }> }) {
+    const course = (await params).course.replace("-", " ")
+    return {
 		title: course,
 		description: `See when ${course} has been offered at UCSC`
 	}
