@@ -6,7 +6,8 @@ export interface Quarter {
 export const termData: Quarter[][] = [
 	[
 		{ id: 2258, name: 'Fall 2025' },
-		{ id: 2260, name: 'Winter 2026' }
+		{ id: 2260, name: 'Winter 2026' },
+		{ id: 2262, name: 'Spring 2026' }
 	],
 	[
 		{ id: 2248, name: 'Fall 2024' },
